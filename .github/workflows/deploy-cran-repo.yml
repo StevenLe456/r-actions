@@ -54,13 +54,13 @@ jobs:
       - name: Checkout calling repository
         uses: actions/checkout@v4
 
-      - name: Checkout r-wasm/actions repository
+      - name: Checkout StevenLe456/r-actions repository
         uses: actions/checkout@v4
         with:
           ref: v1
           repository: StevenLe456/r-actions
           token: ${{ secrets.GITHUB_TOKEN }}
-          path: .actions
+          path: .r-actions
 
       - name: Retrieve packages from `./packages` file
         if: ${{ inputs.packages == '' }}

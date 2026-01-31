@@ -58,7 +58,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: v1
-          repository: StevenLe456/actions
+          repository: StevenLe456/r-actions
           token: ${{ secrets.GITHUB_TOKEN }}
           path: .actions
 

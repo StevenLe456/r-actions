@@ -57,7 +57,7 @@ jobs:
       - name: Checkout StevenLe456/r-actions repository
         uses: actions/checkout@v4
         with:
-          ref: v2
+          ref: v3
           repository: StevenLe456/r-actions
           token: ${{ secrets.GITHUB_TOKEN }}
           path: .r-actions
@@ -74,7 +74,7 @@ jobs:
           cat("pkgs=", paste0(pkgs, collapse = ","), "\n", file = Sys.getenv("GITHUB_OUTPUT"), sep = "", append = TRUE)
 
       - name: Build wasm repo
-        uses: ./.actions/build-rwasm
+        uses: ./.r-actions/build-rwasm
         with:
           # If `.pkgs` does not exist, use `inputs.packages`
           packages: ${{ steps.packages-file.outputs.pkgs || inputs.packages }}
